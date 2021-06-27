@@ -1,0 +1,31 @@
+
+ 
+ <!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<p>{% if board %}</p>
+    <div class = "w3-container">
+        <h2>Python oracle 게시판입니다.</h2>
+        <p> <a href="/writeform" class="w3-bar-item w3-button">게시판 입력</a></p>
+        <table class = "w3-table-all w3-striped">
+            <tr>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>내용</th>
+            </tr>
+            {% for em in board %}
+            <tr>
+                <td><a href = "/content/{{ em.num }}/"> {{ em.name }} </a> </td>
+                <td> {{ em.content }} </td>
+                <td> {{ em.subject }} </td>
+                {% endfor %}
+        </table>
+        {% else %}
+            <p>No polls are availabel.</p>
+            {% endif %}
+</body>
+</html>

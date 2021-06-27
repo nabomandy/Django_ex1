@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<p>{% if content %}</p>
+    <div class = "w3-container">
+        <h2>Python oracle 게시판입니다.</h2>
+        <p> 아나콘다 입니다</p>
+        <table class = "w3-table-all w3-striped">
+            <tr>
+                <th>작성자 : {{ content.name }}</th>
+            </tr>
+            <tr>
+                <th>내용 : {{ content.content }}</th>
+            </tr>
+            <tr>
+                <td> 제목 : {{ content.subject }} </td>
+            </tr>
+            <tr>
+        </table>
+        
+        {% else %}
+            <p> 없습니다 </p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+ 
+ <!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <h2>Python Mysql 게시판 입니다</h2>
+  <p>anaconda 입니다</p>
+
+  <form action="/write/" method="post">
+        {% csrf_token %}
+        name: <input type="text" name="name"><br>
+        subject: <input type="text" name="subject"><br>
+        content: <input type="text" name="content"><br>
+ 
+        <input type="submit" value="저장">
+    </form>
+
+</div>
+
+</body>
+</html>
